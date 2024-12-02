@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="extra.css" />
+  <title>My Projects</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    <!-- Navigation principale : liens vers différentes sections -->
+    <header class="hero-section">
+      <div class="hero-content">
+        <!-- Profile Name -->
+        <h1>
+          <a href="index.html" style="text-decoration: none; color: inherit;">Malek Zitouni</a>
+        </h1>
+        <!-- Navigation Links as Boxes -->
+        <div class="hero-links">
+          <a href="projects.html" class="hero-box">Projects</a>
+          <a href="articles.html" class="hero-box">Articles</a>
+          <a href="Extracurricular Activities.html" class="hero-box">Extracurricular Activities</a>
+        </div>
+      </div>
+    </header>
+  <!-- Activities Section -->
+  <section id="activities">
+    <div class="activities-introduction">
+      <h2>Extracurricular Activities</h2>
+      <p>
+        University life is about more than just academics.it’s also about growth, teamwork and pursuing passions outside the classroom.
+      </p>
+    </div>
+
+    <div class="activities-container">
+      <!-- Activity 1 -->
+      <div class="activity">
+       
+        <div class="text-section">
+          <h3>Team Member at RoboCup Ensi 6.0</h3>
+          <p>
+            My incredible team and I secured FIRST PLACE with our innovative autonomous robot. This victory highlights our dedication, teamwork, and passion for pushing the boundaries of autonomous robotics.
+          </p>
+          <img src="robot.jpg" alt="Team Member at RoboCup">
+        </div>
+      </div>
+
+      <!-- Activity 2 -->
+      <div class="activity">
+        <div class="text-section">
+          <h3>Award-Winning Project</h3>
+          <p>
+            Our team took home first prize with a groundbreaking project that could transform the way animal breeders incubate eggs.
+          </p>
+          <img src="csf2.jpg" alt="CSF Workshops">
+
+        </div>
+      </div>
+
+      <!-- Activity 3 -->
+      <div class="activity">
+        <div class="text-section">
+          <h3>Volunteer Staff</h3>
+          <p>
+            I served as a volunteer staff member at the Tunisian Collegiate Programming Contest: TCPC.
+          </p>
+          <img src="acm-transformed.jpeg" alt="Volunteer Staff at TCPC">
+
+        </div>
+      </div>
+  
+      <!-- Activity HR Manager -->
+      <div class="activity">
+        <div class="text-section">
+
+           <h3>HR Manager at DataOverflow</h3>
+             <p>I'm proud to be part of the DataOverflow committee as HR Manager. My role includes nurturing effective communication, fostering teamwork, and navigating diverse perspectives. Additionally, I had the privilege of leading Ambassadors to expand DataOverflow's influence across institutions. 
+              </p>
+              <img src="acmm.jpg" alt="Volunteer Staff at TCPC">
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <script>
+    const activities = document.querySelectorAll('.activity');
+
+    function revealActivities() {
+      activities.forEach((activity, index) => {
+        setTimeout(() => {
+          activity.classList.add('visible');
+        }, index * 500);
+      });
+    }
+
+    window.addEventListener('load', revealActivities);
+  </script>
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img src="" alt="Full Image" />
+  </div>
+
+  <script>
+    const lightbox = document.querySelector('.lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+    const triggers = document.querySelectorAll('.activity img');
+    const closeBtn = lightbox.querySelector('.close');
+
+    // Open Lightbox
+    triggers.forEach(trigger => {
+      trigger.addEventListener('click', function () {
+        lightboxImg.src = this.src;
+        lightbox.style.display = 'flex';
+      });
+    });
+
+    // Close Lightbox
+    closeBtn.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
+
+    // Close Lightbox on clicking outside the image
+    lightbox.addEventListener('click', (event) => {
+      if (event.target === lightbox) {
+        lightbox.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>

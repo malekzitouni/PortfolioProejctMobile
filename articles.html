@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Articles</title>
+  <link rel="stylesheet" href="articles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation principale : liens vers différentes sections -->
+  <header class="hero-section">
+    <div class="hero-content">
+      <!-- Profile Name -->
+      <h1>
+        <a href="index.html" style="text-decoration: none; color: inherit;">Malek Zitouni</a>
+      </h1>
+      <!-- Navigation Links as Boxes -->
+      <div class="hero-links">
+        <a href="projects.html" class="hero-box">Projects</a>
+        <a href="articles.html" class="hero-box">Articles</a>
+        <a href="Extracurricular Activities.html" class="hero-box">Extracurricular Activities</a>
+      </div>
+    </div>
+  </header>
+  <!-- Introduction Section -->
+  <section id="articles-introduction">
+    <h1>Welcome to My Articles Showcase</h1>
+    <p>
+      As an AI enthusiast with a passion for research, I have delved into areas like computer vision and natural language processing. On this platform, you'll find summaries of my published works, reflecting my commitment to advancing technology through innovative solutions and groundbreaking ideas."
+    </p>
+  </section>
+
+  <section id="articles">
+    <div class="articles-container">
+      <!-- Article 1 -->
+      <div class="article">
+        <div class="article-box">
+          <h3>Foundations of Language Artificial Intelligence: A Guide to NLP, LLMs, and Recurrent Neural Networks</h3>
+        </div>
+        <div class="article-info">
+          <p>January 2025</p>
+          <a href="Unlocking Linguistic Intelligence_ Attention Mechanisms and Transformer Architectures in NLP.pdf" download>Read Full Article</a>
+        </div>
+      </div>
+  
+      <!-- Article 2 -->
+      <div class="article">
+        <div class="article-box">
+          <div class="article-image" ></div>
+          <h3>
+            Towards Automated Construction Modeling: Semantic Segmentation and Classification of Point Clouds into BIM Objects
+          </h3>
+        </div>
+        <div class="article-info">
+          <p>September 2024</p>
+          <a href="BIM IN TOUCH.pdf" download>Read Full Article</a>
+        </div>
+      </div>
+
+      <div class="article">
+        <div class="article-box">
+          <div class="article-image" ></div>
+          <h3>
+            Visual Servoing of a Line Following Robot
+          </h3>
+        </div>
+        <div class="article-info">
+          <p>June 2024</p>
+          <a href="roboy.pdf" download>Read Full Article</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <script>
+    // Select all article elements
+    const articles = document.querySelectorAll('.article');
+
+    // Function to reveal articles one by one
+    function revealArticlesSequentially() {
+      articles.forEach((article, index) => {
+        setTimeout(() => {
+          article.classList.add('visible');
+        }, index * 2000); // 2000ms delay for each article
+      });
+    }
+
+    // Trigger reveal on page load
+    window.addEventListener('load', revealArticlesSequentially);
+  </script>
+
+</body>
+</html>
