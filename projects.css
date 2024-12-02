@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Oswald:wght@300&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+/* Hero Section Styling */
+.hero-section {
+  background: linear-gradient(to bottom right, #f7f7f7, #ffffff); /* Gradient background */
+  color: #1c1a1a; /* White text color */
+  text-align: center;
+  padding: 60px 20px; /* Add spacing */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Profile Name */
+.hero-section h1 {
+  font-family: 'Oswald', sans-serif; /* Eye-catching font */
+  font-size: 3rem; /* Large font size */
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px; /* Add some spacing between letters */
+}
+
+/* Subtitle (optional) */
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin: 10px 0 30px;
+  font-style: italic;
+  color: #232424; /* Softer text color for subtitle */
+}
+
+/* Hero Links as Boxes */
+.hero-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between the boxes */
+  flex-wrap: wrap; /* Wrap on smaller screens */
+}
+
+.hero-box {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 1.2rem; /* Font size for box text */
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #877c7c; /* Blue text for contrast */
+  background: #fff; /* White background for boxes */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animations */
+}
+
+/* Hero Box Hover Effect */
+.hero-box:hover {
+  transform: translateY(-10px); /* Lift the box on hover */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4); /* Add a stronger shadow */
+  background: #fbfbfb; /* Change background to blue */
+  color: #858585; /* Change text color to white */
+}
+/* Styling the clickable name */
+.hero- {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit the text color */
+  font-size: 2rem; /* Optional: Adjust size for prominence */
+  font-weight: bold; /* Optional: Make it bold */
+  transition: color 0.3s ease; /* Add smooth hover effect */
+}
+
+/* Hover effect */
+.hero-name-link:hover {
+  color: #0077b5; /* Optional: LinkedIn-like blue for hover */
+}
+
+
+/* Responsive Design for Smaller Screens */
+@media screen and (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 1.8rem; /* Adjust font size for smaller screens */
+  }
+
+  .hero-links {
+    gap: 10px; /* Reduce spacing between boxes */
+  }
+
+  .hero-box {
+    font-size: 1rem; /* Adjust box text size */
+    padding: 10px 20px; /* Adjust box padding */
+  }
+}
+
+
+/* Project Container Styles */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+  margin: auto;
+  align-items: center;
+}
+
+.projects-introduction p {
+  font-size: 10px;
+  line-height: 1.8;
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #333;
+  padding: 18px;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.projects-introduction h2 {
+  font-size: 1.rem;
+  font-family: 'Playfair Display', serif;
+  color: #120d0d;
+  margin-bottom: 15px;
+  padding: 18px;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+/* Project Box Styles */
+.project {
+  background: linear-gradient(135deg, #f8f9fa, #f4f4f4);
+  border: 1px solid #ddd;
+  border-radius: 18px;
+  padding: 20px;
+  max-width: 600px;
+  height: 300px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #e7e8ea, #e2cfda);
+  box-shadow: 0px 6px 12px rgba(71, 70, 70, 0.2);
+}
+
+/* Project Title */
+.project h3 {
+  font-size: 1.0rem;
+  margin-bottom: 15px;
+  color: #000000;
+  font-family: 'Playfair Display', serif;
+  text-transform: capitalize;
+  letter-spacing: 1.5px;
+  border-bottom: 2px solid #000;
+  padding-bottom: 5px;
+  text-shadow: 0 2px 5px rgba(208, 197, 197, 0.7);
+  font-weight: bold;
+}
+
+/* Project Link Below the Title */
+.project a {
+  font-size: 1.0rem;
+  color: #252525;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 15px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.project a:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 480px) {
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+footer {
+  margin-top: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
+  background-color: #000;
+  color: white;
+}
+
+footer .colonne p {
+  font-size: 12px;
+  color: #ccc;
+  cursor: pointer;
+}
+
+footer .colonne p:hover {
+  color: #fff;
+}
+/* Existing styles ... */
+
+
+@media (max-width: 480px) {
+  body {
+      font-size: 8px;
+  }
+  nav ul {
+      flex-direction: column;
+      padding: 0;
+  }
+  .card {
+      margin: 10px 0;
+  }
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="projects.css" />
+  <title>My Projects</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    <!-- Navigation principale : liens vers différentes sections -->
+    <header class="hero-section">
+      <div class="hero-content">
+        <!-- Profile Name -->
+        <h1>
+          <a href="index.html" style="text-decoration: none; color: inherit;">Malek Zitouni</a>
+        </h1>
+        <!-- Navigation Links as Boxes -->
+        <div class="hero-links">
+          <a href="projects.html" class="hero-box">Projects</a>
+          <a href="articles.html" class="hero-box">Articles</a>
+          <a href="Extracurricular Activities.html" class="hero-box">Extracurricular Activities</a>
+        </div>
+      </div>
+    </header>
+    
+  <section id="projects">
+       <!-- Introduction Section -->
+      <div class="projects-introduction">
+        <h2>Welcome to My Project Showcase</h2>
+        <p>
+          As a dedicated Student , I have worked on a variety of projects that highlight my technical expertise,
+          problem-solving skills, and passion for creating impactful solutions. 
+          Below, you'll find a selection of my work, ranging from innovative research to real-world applications. 
+          Each project reflects my commitment to excellence and continuous learning.
+        </p>
+      </div>
+    <div class="projects-container">
+      <div class="project">
+        <h3>Flower Classification Using ResNet-50 and Transfer Learning</h3>
+        <p>Developed a flower classification model using the ResNet-50 architecture and transfer learning</p>
+        <p>Leveraged Google Cloud’s Vertex AI Workbench for scalable model training and deployment</p>
+        <a href="https://github.com/malekzitouni/Flower-Classification-Using-ResNet-50-and-Transfer-Learning" target="_blank">View on GitHub</a>
+      </div>
+      <div class="project">
+        <h3>Visual Servoing of a Line-Following Robot</h3>
+        <p>Built a lane detection system using a Raspberry Pi Camera and OpenCV for real-time road image processing</p>
+        <a href="https://github.com/malekzitouni/Line-Following-Robot-and-Traffic-Sign-Detection-System-Using-Computer-Vision-and-Artificial-Intellig" target="_blank">View on GitHub</a>
+      </div>
+      <div class="project">
+        <h3>Semantic Segmentation of Large-Scale Point Clouds</h3>
+        <p>Conducted in-depth research on Scan to BIM, Scan vs BIM, and Automated Construction Modeling.</p>
+        <a href="https://github.com/malekzitouni/3D-point-Cloud-Analysis-PointNet-RandLANet" target="_blank">View on GitHub</a>
+      </div>
+      <div class="project">
+        <h3>Exploring Attention Mechanisms in Object Detection & Region-Specific Classification</h3>
+        <p>Developed an object detection model using ResNet-50 with attention mechanisms and Region of Interest (ROI)
+          masks to enhance small object detection and improve classification of blurred images.</p>
+        <a href="https://github.com/malekzitouni/ObjectiX-Intelligent-Object-Detection-ROI-Classification-ResNet50AttentionMechanism" target="_blank">View on GitHub</a>
+      </div>
+      <div class="project">
+        <h3>Advertising-Analytics-Linear-Regression-Model</h3>
+        <p>Developing a Custom Linear Regression Model from Scratch for Sales Forecasting Based on Advertising Budgets with 91% Accuracy</p>
+        <a href="https://github.com/malekzitouni/Advertising-Analytics-Linear-Regression-Model" target="_blank">View on GitHub</a>
+      </div>
+      <div class="project">
+        <h3>Smart Environmental Monitor with STM32 and ThingSpeak</h3>
+        <p>Real-Time Environmental Monitoring System Using STM32 F446RE, DHT22 Sensor, and ThingSpeak Integration</p>
+        <a href="https://github.com/malekzitouni/DHT22-STM32" target="_blank">View on GitHub</a>
+      </div>
+      <div class="project">
+        <h3>Automated 4.0 Factory Simulation with TIA Portal and Factory IO</h3>
+        <p>The design and implementation of an automated control and performance evaluation system for a virtual 4.0 factory</p>
+        <a href="https://github.com/malekzitouni/FACTORY-IO-TIA-PORTAL-V17-PROJECT" target="_blank">View on GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Select all project elements
+    const projects = document.querySelectorAll('.project');
+
+    // Function to reveal projects one by one
+    function revealProjectsSequentially() {
+      projects.forEach((project, index) => {
+        setTimeout(() => {
+          project.classList.add('visible');
+        }, index * 2000); // 1000ms delay for each project
+      });
+    }
+
+    // Trigger reveal on page load
+    window.addEventListener('load', revealProjectsSequentially);
+  </script>
+</body>
+</html>
